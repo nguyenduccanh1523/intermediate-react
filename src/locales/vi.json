@@ -1,0 +1,44 @@
+{
+  "home": "Trang chủ",
+  "about": "Giới thiệu",
+  "contact": "Liên hệ",
+
+  "todo": "Ứng dụng danh sách công việc",
+  "weather": "Ứng dụng thời tiết",
+  "ecommerce": "Trang web thương mại điện tử",
+  "template": "Trang web mẫu",
+
+  "solution": "Giải pháp cho website & ứng dụng",
+  "solutionTitle": "Kích hoạt doanh nghiệp của bạn với giải pháp web và ứng dụng",
+  "todoList": "Ứng dụng danh sách công việc",
+  "desTodoList": "Ứng dụng danh sách công việc giúp bạn quản lý và theo dõi các nhiệm vụ hàng ngày một cách hiệu quả.",
+  "weatherApp": "Ứng dụng thời tiết",
+  "desWeatherApp": "Ứng dụng thời tiết cung cấp thông tin thời tiết chính xác và cập nhật theo thời gian thực.",
+  "ecommerceWebsite": "Trang web thương mại điện tử",
+  "desEcommerceWebsite": "Trang web thương mại điện tử giúp bạn tăng cường sự hiện diện trực tuyến và tiếp cận khách hàng một cách hiệu quả.",
+  "templateWebsite": "Trang web mẫu",
+  "desTemplateWebsite": "Trang web mẫu cung cấp các giải pháp thiết kế sẵn sàng để bạn có thể tùy chỉnh và sử dụng ngay lập tức.",
+
+  "whyUs": "Tại sao nên chọn chúng tôi?",
+  "why1": "Tối ưu hiệu suất",
+  "why2": "Tùy chỉnh linh hoạt",
+  "why3": "Hỗ trợ kỹ thuật tận tâm",
+  "desWhy1": "Ứng dụng nhanh, mượt, dễ sử dụng - phù hợp với mọi đối tượng người dùng.",
+  "desWhy2": "Dễ dàng tích hợp và mở rộng theo nhu cầu của doanh nghiệp.",
+  "desWhy3": "Đội ngũ hỗ trợ nhanh chóng, sẵn sàng đồng hành cùng bạn.",
+
+  "testimonial": "Khách hàng nói gì?",
+  "test1": "Ứng dụng này giúp đội nhóm của chúng tôi tăng năng suất đến 30%!",
+  "test2": "Rất dễ dùng và tiết kiệm thời gian cho việc quản lý dự án.",
+  "man": "Anh",
+  "woman": "Chị",
+
+  "cta": "Hãy bắt đầu hành trình số hóa doanh nghiệp của bạn ngay hôm nay!",
+  "desCta": "Đăng ký dùng thử miễn phí ngay hôm nay để trải nghiệm các ứng dụng quản lý công việc, thương mại điện tử và thời tiết thời gian thực — tất cả chỉ trong một nền tảng!",
+  "ctaForm": "Đăng ký dùng thử miễn phí",
+  "name": "Họ và tên",
+  "email": "Email",
+  "phone": "Số điện thoại",
+  "submit": "Gửi yêu cầu dùng thử",
+  "contactInfo": "Chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ."
+}
