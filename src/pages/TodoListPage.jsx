@@ -6,7 +6,7 @@ import TodoList from "../components/Todo/TodoList";
 const TodoListPage = () => {
   const { t } = useTranslation();
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-500 via-blue-600 to-blue-900 dark:from-blue-900 dark:via-blue-800 dark:to-blue-500">
+    <div className="min-h-screen mb-10 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-900 dark:from-blue-900 dark:via-blue-800 dark:to-blue-500">
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-white dark:text-white mb-2 drop-shadow-lg">
