@@ -40,5 +40,14 @@
   "email": "Email",
   "phone": "Số điện thoại",
   "submit": "Gửi yêu cầu dùng thử",
-  "contactInfo": "Chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ."
+  "contactInfo": "Chúng tôi sẽ liên hệ với bạn trong vòng 24 giờ.",
+
+  "todoListspan": "Quản lý công việc hiệu quả",
+  "todoPlaceholder": "Thêm task mới...",
+  "todoAdd": "Thêm task",
+  "todoNote": "Chưa có task nào. Hãy thêm task đầu tiên!",
+  "todoListTask": "Danh sách công việc",
+
+  "desabout": "Chúng tôi là một nhóm chuyên gia trong lĩnh vực phát triển web và ứng dụng, cam kết mang đến giải pháp tốt nhất cho doanh nghiệp của bạn.",
+  "start": "Bắt đầu ngay"
 }

@@ -1,10 +1,10 @@
 import React from 'react'
+import HeroSlide from '../components/About/HeroSlide'
 
 const AboutPage = () => {
   return (
     <div>
-      <h1>About Us</h1>
-      <p>We are a company dedicated to providing the best services to our customers.</p>
+      <HeroSlide />
     </div>
   )
 }

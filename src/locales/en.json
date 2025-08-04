@@ -40,5 +40,14 @@
   "email": "Email",
   "phone": "Phone Number",
   "submit": "Submit Trial Request",
-  "contactInfo": "We will contact you within 24 hours."
+  "contactInfo": "We will contact you within 24 hours.",
+
+  "todoListspan": "Manage Tasks Effectively",
+  "todoPlaceholder": "Add new task...",
+  "todoAdd": "Add Task",
+  "todoNote": "No tasks yet. Add your first task!",
+  "todoListTask": "Todo List",
+
+  "desabout": "We are a team of experts in web and app development, committed to providing the best solutions for your business.",
+  "start": "Get Started"
 }
