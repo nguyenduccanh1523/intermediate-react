@@ -15,7 +15,7 @@ const HeroSlide = () => {
         <p className="text-white mt-4 max-w-2xl text-center">
           {t("desabout")}
         </p>
-        <button className="mt-6 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors duration-200">
+        <button onClick={() => {location.href = "/todo"}} className="mt-6 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors duration-200">
           {t("start")}
         </button>
       </div>

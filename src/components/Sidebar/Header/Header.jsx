@@ -124,15 +124,32 @@ const Header = () => {
               {t("template")}
             </Link>
           </li>
-          <li>
-            <Link
-              to="/contact"
-              className={`hover:opacity-75 transition-opacity hover:text-orange-500 ${
-                activeNavItem === "contact" ? "text-orange-500" : ""
-              }`}
-            >
-              {t("contact")}
-            </Link>
+          <li
+            className={`hover:opacity-75 cursor-pointer transition-opacity hover:text-orange-500 ${
+              activeNavItem === "contact" ? "text-orange-500" : ""
+            }`}
+            onClick={async () => {
+              const primaryURL = "https://ndccanh19.io.vn/";
+              const fallbackURL =
+                "https://sweet-dieffenbachia-19c78a.netlify.app/";
+
+              try {
+                // Thử mở URL chính trước
+                // eslint-disable-next-line no-unused-vars
+                const res = await fetch(primaryURL, {
+                  method: "HEAD",
+                  mode: "no-cors",
+                });
+                // Với mode: 'no-cors', fetch có thể thành công nhưng không thể kiểm tra res.ok
+                // nên tốt hơn là thử mở luôn URL và nếu fail thì dùng fallback (xem mẹo bên dưới)
+                window.open(primaryURL, "_blank");
+                // eslint-disable-next-line no-unused-vars
+              } catch (error) {
+                window.open(fallbackURL, "_blank");
+              }
+            }}
+          >
+            {t("contact")}
           </li>
         </ul>
 
@@ -276,17 +293,32 @@ const Header = () => {
               {t("template")}
             </Link>
           </li>
-          <li>
-            <Link
-              to="/contact"
-              className={`block py-2 transition-colors hover:text-orange-500 ${
-                activeNavItem === "contact"
-                  ? "text-orange-500 font-bold"
-                  : "text-white font-normal"
-              }`}
-            >
-              {t("contact")}
-            </Link>
+          <li
+            className={`hover:opacity-75 cursor-pointer transition-opacity hover:text-orange-500 ${
+              activeNavItem === "contact" ? "text-orange-500" : ""
+            }`}
+            onClick={async () => {
+              const primaryURL = "https://ndccanh19.io.vn/";
+              const fallbackURL =
+                "https://sweet-dieffenbachia-19c78a.netlify.app/";
+
+              try {
+                // Thử mở URL chính trước
+                // eslint-disable-next-line no-unused-vars
+                const res = await fetch(primaryURL, {
+                  method: "HEAD",
+                  mode: "no-cors",
+                });
+                // Với mode: 'no-cors', fetch có thể thành công nhưng không thể kiểm tra res.ok
+                // nên tốt hơn là thử mở luôn URL và nếu fail thì dùng fallback (xem mẹo bên dưới)
+                window.open(primaryURL, "_blank");
+                // eslint-disable-next-line no-unused-vars
+              } catch (error) {
+                window.open(fallbackURL, "_blank");
+              }
+            }}
+          >
+            {t("contact")}
           </li>
         </ul>
       )}
