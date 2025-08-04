@@ -1,0 +1,44 @@
+{
+  "home": "Home",
+  "about": "About",
+  "contact": "Contact",
+
+  "todo": "Todo List App",
+  "weather": "Weather App",
+  "ecommerce": "E-commerce Website",
+  "template": "Template Website",
+
+  "solution": "Solutions for Websites & Apps",
+  "solutionTitle": "Empower Your Business with Web and App Solutions",
+  "todoList": "Todo List App",
+  "desTodoList": "The Todo List App helps you manage and track daily tasks effectively.",
+  "weatherApp": "Weather App",
+  "desWeatherApp": "The Weather App provides accurate and real-time weather information.",  
+  "ecommerceWebsite": "E-commerce Website",
+  "desEcommerceWebsite": "The E-commerce Website enhances your online presence and effectively reaches customers.",
+  "templateWebsite": "Template Website",
+  "desTemplateWebsite": "The Template Website provides ready-to-use design solutions that you can customize and deploy instantly.",
+
+  "whyUs": "Why Choose Us?",
+  "why1": "Performance Optimization",
+  "why2": "Flexible Customization",
+  "why3": "Dedicated Technical Support",
+  "desWhy1": "Fast, smooth, and user-friendly applications suitable for all user types.",
+  "desWhy2": "Easily integrated and scalable according to business needs.",
+  "desWhy3": "A quick support team ready to accompany you.",
+
+  "testimonial": "What Our Customers Say?",
+  "test1": "This app has helped our team increase productivity by 30%!",
+  "test2": "Very user-friendly and saves time in project management.",
+  "man": "MR",
+  "woman": "MRS",
+
+  "cta": "Start your digital transformation journey today!",
+  "desCta": "Sign up for a free trial today to experience task management, e-commerce, and real-time weather apps — all in one platform!",
+  "ctaForm": "Sign Up for Free Trial",
+  "name": "Full Name",
+  "email": "Email",
+  "phone": "Phone Number",
+  "submit": "Submit Trial Request",
+  "contactInfo": "We will contact you within 24 hours."
+}
