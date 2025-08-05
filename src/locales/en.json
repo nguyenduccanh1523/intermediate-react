@@ -148,5 +148,6 @@
   "errorProduct": "An error occurred while loading product data",
   "loadingProduct": "Loading product data...",
   "viewMoreProducts": "View More Products",
-  "category": "Category"
+  "category": "Category",
+  "description": "Description"
 }

@@ -148,5 +148,6 @@
   "errorProduct": "Có lỗi xảy ra khi tải dữ liệu",
   "loadingProduct": "Đang tải sản phẩm...",
   "viewMoreProducts": "Xem thêm sản phẩm",
-  "category": "Danh mục"
+  "category": "Danh mục",
+  "description": "Mô tả"
 }

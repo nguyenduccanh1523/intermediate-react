@@ -4,6 +4,7 @@ import {
   fetchCategories,
   fetchFilteredProducts,
 } from "../../api/Ecommerce/productApi";
+import { debounce } from "../../utils/Ecommerce/helpers";
 
 export const useProducts = (initialFilters = {}) => {
   // State management
@@ -134,17 +135,19 @@ export const useProducts = (initialFilters = {}) => {
     }
   }, [loading, pagination.hasMore, applyFilters]);
 
-  // Search products with debounce effect
-  const handleSearch = useCallback(
-    async (searchTerm) => {
-      if (!searchTerm.trim()) {
-        // If search is empty, reload all products
-        applyFilters({ search: "", category: "all" });
-        return;
-      }
+  // Create debounced search function
+  const debouncedSearch = useMemo(
+    () =>
+      debounce((searchTerm) => {
+        const newFilters = { search: searchTerm };
 
-      applyFilters({ search: searchTerm, category: "all" });
-    },
+        // Reset category when searching
+        if (searchTerm) {
+          newFilters.category = "all";
+        }
+
+        applyFilters(newFilters);
+      }, 1500), // Wait 1500ms after user stops typing
     [applyFilters]
   );
 
@@ -152,6 +155,15 @@ export const useProducts = (initialFilters = {}) => {
   const updateFilter = useCallback(
     (filterKey, value) => {
       const newFilters = { [filterKey]: value };
+
+      // Handle search with debounce
+      if (filterKey === "search") {
+        // Update filter state immediately for UI responsiveness
+        setFilters((prev) => ({ ...prev, search: value }));
+        // But debounce the actual API call
+        debouncedSearch(value);
+        return;
+      }
 
       // Reset category when searching
       if (filterKey === "search" && value) {
@@ -165,7 +177,7 @@ export const useProducts = (initialFilters = {}) => {
 
       applyFilters(newFilters);
     },
-    [applyFilters]
+    [applyFilters, debouncedSearch]
   );
 
   // Clear all filters
@@ -216,7 +228,6 @@ export const useProducts = (initialFilters = {}) => {
 
     // Actions
     updateFilter,
-    searchProducts: handleSearch,
     clearFilters,
     loadMore,
 

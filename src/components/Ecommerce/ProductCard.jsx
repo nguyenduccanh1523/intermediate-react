@@ -135,6 +135,7 @@ const ProductCard = ({
       {/* Content */}
       <div className="p-5">
         {/* Brand */}
+        
         <div className="text-sm text-gray-100 mb-1">{product.brand}</div>
 
         {/* Title */}

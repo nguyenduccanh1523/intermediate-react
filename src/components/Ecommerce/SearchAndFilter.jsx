@@ -87,7 +87,7 @@ const SearchAndFilter = ({
         </div>
 
         {/* Quick Filters */}
-        <div className="flex gap-3 items-center">
+        <div className="flex flex-wrap gap-3 items-center">
           {/* Category Filter */}
           <select
             value={selectedCategory}
