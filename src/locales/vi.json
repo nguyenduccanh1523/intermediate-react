@@ -64,7 +64,6 @@
   "sortDateDesc": "Mới nhất",
   "noResults": "Không có công việc nào phù hợp với tiêu chí tìm kiếm.",
 
-
   "desabout": "Chúng tôi là một nhóm chuyên gia trong lĩnh vực phát triển web và ứng dụng, cam kết mang đến giải pháp tốt nhất cho doanh nghiệp của bạn.",
   "start": "Bắt đầu ngay",
   "members": "Đội ngũ của chúng tôi",
@@ -77,5 +76,28 @@
   "customerCentric": "Khách hàng là trung tâm",
   "innovationDescription": "Chúng tôi không ngừng đổi mới và sáng tạo để mang đến những giải pháp tốt nhất.",
   "integrityDescription": "Chúng tôi cam kết hoạt động với sự chính trực và minh bạch trong mọi giao dịch.",
-  "customerCentricDescription": "Khách hàng là trung tâm trong mọi quyết định và hành động của chúng tôi."
+  "customerCentricDescription": "Khách hàng là trung tâm trong mọi quyết định và hành động của chúng tôi.",
+
+  "loading": "Đang tải...",
+  "searchPlace": "Tìm kiếm",
+  "searchingPlace": "Đang tìm kiếm...",
+  "weatherPlaceholder": "Nhập tên thành phố để xem thời tiết",
+  "error": "Không tìm thấy thành phố hoặc lỗi API:",
+  "felllike": "Cảm giác như",
+  "humidity": "Độ ẩm",
+  "wind": "Tốc độ gió",
+  "pressure": "Áp suất",
+  "forecast5Days": "Dự báo thời tiết 5 ngày",
+  "hourlyForecast": "Dự báo theo giờ",
+  "dailyForecast": "Dự báo theo ngày",
+  "temperatureChart": "Biểu đồ nhiệt độ",
+  "today": "Hôm nay",
+  "tomorrow": "Ngày mai",
+  "maxTemp": "Cao nhất",
+  "minTemp": "Thấp nhất",
+  "currentWeather": "Thời tiết hiện tại",
+  "weatherSummary": "Tóm tắt thời tiết",
+  "averageTemperature": "Nhiệt độ trung bình",
+  "temperatureRange": "Biên độ nhiệt độ",
+  "hoverTip": "Di chuột vào các cột để xem chi tiết thời tiết"
 }
