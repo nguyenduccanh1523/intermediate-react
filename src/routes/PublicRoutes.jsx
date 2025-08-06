@@ -3,6 +3,7 @@ import AboutPage from '../pages/AboutPage';
 import TodoListPage from "../pages/TodoListPage";
 import WeatherPage from "../pages/WeatherPage";
 import Ecommerce from "../pages/Ecommerce";
+import Template from "../pages/Template";
 
 const publicRoutes = [
   {
@@ -24,7 +25,12 @@ const publicRoutes = [
   {
     path: "/ecommerce",
     element: <Ecommerce />
-  }
+  },
+  {
+    path: "template",
+    element: <Template />
+  },
+
 
 ];
 
