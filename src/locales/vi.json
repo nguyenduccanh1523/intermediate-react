@@ -149,5 +149,15 @@
   "loadingProduct": "Đang tải sản phẩm...",
   "viewMoreProducts": "Xem thêm sản phẩm",
   "category": "Danh mục",
-  "description": "Mô tả"
+  "description": "Mô tả",
+  "addedToCart": "Đã thêm vào giỏ hàng",
+  "addedToCartSuccess": "đã được thêm vào giỏ hàng",
+  "removedFromCart": "Đã xóa khỏi giỏ hàng",
+  "removedFromCartSuccess": "đã được xóa khỏi giỏ hàng",
+  "addedToWishlist": "Đã thêm vào yêu thích",
+  "addedToWishlistSuccess": "đã được thêm vào danh sách yêu thích",
+  "removedFromWishlist": "Đã xóa khỏi yêu thích",
+  "removedFromWishlistSuccess": "đã được xóa khỏi danh sách yêu thích",
+  "updated": "đã được cập nhật trong giỏ hàng",
+  "maxStockReached": "Đã đạt số lượng tối đa trong kho"
 }

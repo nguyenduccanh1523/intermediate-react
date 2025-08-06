@@ -7,8 +7,11 @@ import SearchAndFilter from "../components/Ecommerce/SearchAndFilter";
 import { useTranslation } from "react-i18next";
 import { IoMdCart, IoMdHeart } from "react-icons/io";
 import { useProducts } from "../hooks/Ecommerce/useProducts";
+import { App } from "antd";
 
 const Ecommerce = () => {
+  const { notification: notificationApi } = App.useApp();
+
   const {
     products,
     categories,
@@ -44,6 +47,20 @@ const Ecommerce = () => {
               : item
           )
         );
+        // Notification for quantity update
+        notificationApi.success({
+          message: t("addedToCart"),
+          description: `${product.title} ${t("updated")} (${newQuantity})`,
+          placement: "topRight",
+          duration: 3,
+        });
+      } else {
+        notificationApi.warning({
+          message: t("outOfStock"),
+          description: `${product.title} ${t("maxStockReached")}`,
+          placement: "topRight",
+          duration: 4,
+        });
       }
     } else {
       setCartItems([
@@ -53,6 +70,13 @@ const Ecommerce = () => {
           cartQuantity: product.cartQuantity || 1,
         },
       ]);
+      // Notification for new item
+      notificationApi.success({
+        message: t("addedToCart"),
+        description: `${product.title} ${t("addedToCartSuccess")}`,
+        placement: "topRight",
+        duration: 3,
+      });
     }
   };
 
@@ -65,7 +89,18 @@ const Ecommerce = () => {
   };
 
   const handleRemoveFromCart = (productId) => {
+    const removedItem = cartItems.find((item) => item.id === productId);
     setCartItems(cartItems.filter((item) => item.id !== productId));
+
+    // Notification for item removal
+    if (removedItem) {
+      notificationApi.error({
+        message: t("removedFromCart"),
+        description: `${removedItem.title} ${t("removedFromCartSuccess")}`,
+        placement: "topRight",
+        duration: 3,
+      });
+    }
   };
 
   const handleToggleWishlist = (product) => {
@@ -73,13 +108,38 @@ const Ecommerce = () => {
 
     if (existingItem) {
       setWishlistItems(wishlistItems.filter((item) => item.id !== product.id));
+      // Notification for removing from wishlist
+      notificationApi.error({
+        message: t("removedFromWishlist"),
+        description: `${product.title} ${t("removedFromWishlistSuccess")}`,
+        placement: "topRight",
+        duration: 3,
+      });
     } else {
       setWishlistItems([...wishlistItems, product]);
+      // Notification for adding to wishlist
+      notificationApi.success({
+        message: t("addedToWishlist"),
+        description: `${product.title} ${t("addedToWishlistSuccess")}`,
+        placement: "topRight",
+        duration: 3,
+      });
     }
   };
 
   const handleRemoveFromWishlist = (productId) => {
+    const removedItem = wishlistItems.find((item) => item.id === productId);
     setWishlistItems(wishlistItems.filter((item) => item.id !== productId));
+
+    // Notification for removing from wishlist
+    if (removedItem) {
+      notificationApi.error({
+        message: t("removedFromWishlist"),
+        description: `${removedItem.title} ${t("removedFromWishlistSuccess")}`,
+        placement: "topRight",
+        duration: 3,
+      });
+    }
   };
 
   const handleAddToCartFromWishlist = (product) => {
@@ -113,7 +173,7 @@ const Ecommerce = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div>
-              <h1 className="text-2xl font-bold text-white">
+              <h1 className="text-2xl m-2 font-bold text-white">
                 {t("ecommerce")}
               </h1>
               <p className="text-sm text-gray-200">{t("desEcommerce")}</p>
@@ -216,13 +276,11 @@ const Ecommerce = () => {
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  {stats.displayedProducts}{" "}
-                  {t("products")}
+                  {stats.displayedProducts} {t("products")}
                 </h2>
                 {stats.hasActiveFilters && (
                   <p className="text-sm text-gray-500 mt-1">
-                    {filters.search &&
-                      `${t("results")} "${filters.search}"`}
+                    {filters.search && `${t("results")} "${filters.search}"`}
                     {filters.category !== "all" &&
                       ` ${t("inCategory")} ${filters.category}`}
                   </p>
@@ -274,7 +332,7 @@ const Ecommerce = () => {
                               d="M19 9l-7 7-7-7"
                             />
                           </svg>
-                        { t("viewMoreProducts") }
+                          {t("viewMoreProducts")}
                         </>
                       )}
                     </button>

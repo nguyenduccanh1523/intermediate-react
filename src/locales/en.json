@@ -149,5 +149,15 @@
   "loadingProduct": "Loading product data...",
   "viewMoreProducts": "View More Products",
   "category": "Category",
-  "description": "Description"
+  "description": "Description",
+  "addedToCart": "Added to Cart",
+  "addedToCartSuccess": "has been added to your cart",
+  "removedFromCart": "Removed from Cart",
+  "removedFromCartSuccess": "has been removed from your cart",
+  "addedToWishlist": "Added to Wishlist",
+  "addedToWishlistSuccess": "has been added to your wishlist",
+  "removedFromWishlist": "Removed from Wishlist",
+  "removedFromWishlistSuccess": "has been removed from your wishlist",
+  "updated": "updated in cart",
+  "maxStockReached": "Maximum stock reached"
 }

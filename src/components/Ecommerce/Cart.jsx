@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { IoMdCart } from "react-icons/io";
+import { formatPrice } from "../../utils/Ecommerce/helpers";
 const Cart = ({
   cartItems,
   onUpdateQuantity,
@@ -8,15 +9,7 @@ const Cart = ({
   onClose,
   onCheckout,
 }) => {
-
   const { t } = useTranslation();
-
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat("vi-VN", {
-      style: "currency",
-      currency: "VND",
-    }).format(price);
-  };
 
   const getTotalPrice = () => {
     return cartItems.reduce(
@@ -68,9 +61,7 @@ const Cart = ({
             <h3 className="text-lg font-medium text-gray-900 mb-2">
               {t("cartEmpty")}
             </h3>
-            <p className="text-gray-500 mb-4">
-              {t("cartEmptyDescription")}
-            </p>
+            <p className="text-gray-500 mb-4">{t("cartEmptyDescription")}</p>
             <button
               onClick={onClose}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors duration-200"
@@ -90,7 +81,9 @@ const Cart = ({
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <div>
             <h2 className="text-2xl font-bold text-gray-900">{t("cart")}</h2>
-            <p className="text-gray-500 mt-1">{getTotalItems()} {t("products")}</p>
+            <p className="text-gray-500 mt-1">
+              {getTotalItems()} {t("products")}
+            </p>
           </div>
           <button
             onClick={onClose}
@@ -121,12 +114,12 @@ const Cart = ({
                   {/* Product Image */}
                   <div className="w-20 h-20 rounded-lg overflow-hidden bg-white flex-shrink-0">
                     <img
-                      src={item.image}
+                      src={item.thumbnail || item.images?.[0] || "https://via.placeholder.com/80x80?text=No+Image"}
                       alt={item.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-
+                  
                   {/* Product Info */}
                   <div className="flex-1 min-w-0">
                     <div className="flex justify-between items-start">
@@ -246,7 +239,9 @@ const Cart = ({
           {/* Order Summary */}
           <div className="space-y-2 mb-6">
             <div className="flex justify-between text-gray-600">
-              <span>{t("cartSubtotal")} ({getTotalItems()} {t("products")})</span>
+              <span>
+                {t("cartSubtotal")} ({getTotalItems()} {t("products")})
+              </span>
               <span>{formatPrice(getTotalPrice())}</span>
             </div>
             <div className="flex justify-between text-gray-600">
