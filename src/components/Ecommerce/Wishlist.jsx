@@ -1,6 +1,7 @@
 import React from "react";
 import { IoMdHeart, IoMdHeartEmpty } from "react-icons/io";
 import { useTranslation } from "react-i18next";
+import { formatPrice } from "../../utils/Ecommerce/helpers";
 
 const Wishlist = ({
   wishlistItems,
@@ -11,12 +12,6 @@ const Wishlist = ({
 }) => {
   const { t } = useTranslation();
 
-  const formatPrice = (price) => {
-    return new Intl.NumberFormat("vi-VN", {
-      style: "currency",
-      currency: "VND",
-    }).format(price);
-  };
 
   const renderStars = (rating) => {
     const stars = [];
@@ -154,21 +149,20 @@ const Wishlist = ({
                 {/* Image Container */}
                 <div className="relative">
                   <img
-                    src={item.image}
-                    alt={item.name}
+                    src={item.thumbnail || item.images?.[0] || "https://via.placeholder.com/300x300?text=No+Image"}
+                    alt={item.id}
                     className="w-full h-48 object-cover cursor-pointer"
                     onClick={() => onViewDetail(item)}
                   />
-
                   {/* Discount Badge */}
-                  {item.discount > 0 && (
+                  {item.discountPercentage > 0 && (
                     <div className="absolute top-3 left-3 bg-red-500 text-white px-2 py-1 rounded-md text-sm font-medium">
-                      -{item.discount}%
+                      -{item.discountPercentage}%
                     </div>
                   )}
 
                   {/* Stock Status */}
-                  {!item.inStock && (
+                  {!item.stock && (
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                       <span className="text-white text-lg font-semibold">
                         {t("outOfStock")}
@@ -196,7 +190,7 @@ const Wishlist = ({
                     className="font-semibold text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 cursor-pointer transition-colors duration-200"
                     onClick={() => onViewDetail(item)}
                   >
-                    {item.name}
+                    {item.title}
                   </h3>
 
                   {/* Rating */}
@@ -205,7 +199,7 @@ const Wishlist = ({
                       {renderStars(item.rating)}
                     </div>
                     <span className="text-sm text-gray-600">
-                      {item.rating} ({item.reviews} {t("reviews")})
+                      {item.rating} ({item.reviews.length} {t("reviews")})
                     </span>
                   </div>
 
@@ -216,7 +210,9 @@ const Wishlist = ({
                     </span>
                     {item.originalPrice > item.price && (
                       <span className="text-sm text-gray-500 line-through">
-                        {formatPrice(item.originalPrice)}
+                        {formatPrice(
+                          item.price / (1 - item.discountPercentage / 100)
+                        )}
                       </span>
                     )}
                   </div>
@@ -225,14 +221,14 @@ const Wishlist = ({
                   <div className="flex gap-2">
                     <button
                       onClick={() => onAddToCart(item)}
-                      disabled={!item.inStock}
+                      disabled={!item.stock}
                       className={`flex-1 py-2 px-3 rounded-lg font-medium transition-all duration-200 text-sm ${
-                        item.inStock
+                        item.stock
                           ? "bg-blue-600 hover:bg-blue-700 text-white"
                           : "bg-gray-300 text-gray-500 cursor-not-allowed"
                       }`}
                     >
-                      {item.inStock ? t("addToCart") : t("outOfStock")}
+                      {item.stock ? t("addToCart") : t("outOfStock")}
                     </button>
                     <button
                       onClick={() => onViewDetail(item)}
