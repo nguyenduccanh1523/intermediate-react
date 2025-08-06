@@ -7,6 +7,8 @@ import DarkMode from "../../icons/DarkMode";
 import LightMode from "../../icons/LightMode";
 import { FaArrowUp } from "react-icons/fa";
 import { useLocation, Link } from "react-router-dom";
+import logo from "../../../assets/logo.png"; 
+
 const Header = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -62,7 +64,8 @@ const Header = () => {
           isSticky ? "text-gray-900" : "text-white"
         } dark:text-white`}
       >
-        <h1 className="text-x font-bold">My Application Intermediate</h1>
+        {/* <h1 className="text-x font-bold">My Application Intermediate</h1> */}
+        <img src={logo} alt="Logo" className=" w-24" />
         <ul className="hidden md:flex space-x-6 text-sm font-medium">
           <li>
             <Link
