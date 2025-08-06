@@ -159,5 +159,9 @@
   "removedFromWishlist": "Removed from Wishlist",
   "removedFromWishlistSuccess": "has been removed from your wishlist",
   "updated": "updated in cart",
-  "maxStockReached": "Maximum stock reached"
+  "maxStockReached": "Maximum stock reached",
+
+  "templateDescription": "The Template Website provides ready-to-use design solutions that you can customize and deploy instantly.",
+  "noTemplates": "No templates found",
+  "noTemplatesDescription": "Currently, there are no templates available."
 }

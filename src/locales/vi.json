@@ -159,5 +159,9 @@
   "removedFromWishlist": "Đã xóa khỏi yêu thích",
   "removedFromWishlistSuccess": "đã được xóa khỏi danh sách yêu thích",
   "updated": "đã được cập nhật trong giỏ hàng",
-  "maxStockReached": "Đã đạt số lượng tối đa trong kho"
+  "maxStockReached": "Đã đạt số lượng tối đa trong kho",
+
+  "templateDescription": "Trang web mẫu cung cấp các giải pháp thiết kế sẵn sàng để bạn có thể tùy chỉnh và sử dụng ngay lập tức.",
+  "noTemplates": "Không có mẫu nào",
+  "noTemplatesDescription": "Hiện tại chưa có mẫu nào."
 }
